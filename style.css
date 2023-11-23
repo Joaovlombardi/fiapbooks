@@ -1,0 +1,16 @@
+.img {
+    width: 100px;
+    height: 100px;
+}
+body{
+    background-color: #083231;
+}
+.black{
+    background-color: black;
+}
+.card{
+    width: 60%;
+}
+.margen{
+    margin-left:10%;
+}
