@@ -1,13 +1,15 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require('path');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(bodyParser.json());
 const port = 3000;
-
+app.use(express.static("public"))
+app.use('/static', express.static(path.join(__dirname, 'public')));
 mongoose.connect('mongodb://127.0.0.1:27017/fiapbooks',{
     useNewUrlParser : true,
     useUnifiedTopology : true
